@@ -1,0 +1,2 @@
+include deelzebub/schema.sql
+global-exclude *.pyc
