@@ -1,0 +1,15 @@
+DROP TABLE IF EXISTS user;
+DROP TABLE IF EXISTS scores;
+
+CREATE TABLE user (
+  id INTEGER PRIMARY KEY,
+  username TEXT NOT NULL,
+);
+
+CREATE TABLE scores (
+  id INTEGER PRIMARY KEY,
+  usr_id INTEGER NOT NULL,
+  wordle_id INTEGER NOT NULL,
+  score INTEGER NOT NULL,
+  FOREIGN KEY (usr_id) REFERENCES user (id)
+);
